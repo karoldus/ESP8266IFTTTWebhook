@@ -36,8 +36,8 @@ void loop() {
     last = current;
     if (current == 1)
       {
-        ifttt.trigger("1","2","a"); //3 values
-        delay(10000);
+        ifttt.trigger("1","a","Something"); //3 values
+        delay(5000);
         ifttt.trigger("1"); //1 value
       }     
       
