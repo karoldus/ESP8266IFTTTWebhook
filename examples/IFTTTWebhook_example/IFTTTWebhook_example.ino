@@ -17,8 +17,9 @@ const char* WEBHOOK_NAME = "YOUR_EVENT_NAME";
 int current = 0;
 int last = 0;
 
+WiFiClient client;
 //Create ifttt object
-ESP8266IFTTTWebhook ifttt (WEBHOOK_NAME, API_KEY);
+ESP8266IFTTTWebhook ifttt (WEBHOOK_NAME, API_KEY, client);
 
 void setup() {
   Serial.begin(115200);

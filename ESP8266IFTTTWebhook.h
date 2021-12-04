@@ -10,7 +10,7 @@
 class ESP8266IFTTTWebhook
 {
 	public:
-	ESP8266IFTTTWebhook (String EVENT_NAME, String API_KEY);
+	ESP8266IFTTTWebhook (String EVENT_NAME, String API_KEY, WiFiClient CLIENT);
     void trigger();
 	void trigger(String value1);
 	void trigger(String value1, String value2);
@@ -19,6 +19,7 @@ class ESP8266IFTTTWebhook
 	private:
 	String _EVENT_NAME;
 	String _API_KEY;
+    WiFiClient _CLIENT;
 };
 
 
