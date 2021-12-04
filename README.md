@@ -18,7 +18,8 @@ You also have to create [IFTTT](https://ifttt.com) account and webhook event ("t
 
 2. Instantiate an `ESP8266IFTTTWebhook` object using the event name and your API key:
 ```cpp
-ESP8266IFTTTWebhook ifttt (WEBHOOK_NAME, API_KEY);
+WiFiClient client;
+ESP8266IFTTTWebhook ifttt (WEBHOOK_NAME, API_KEY, client);
 ```
 *You can get your API key by going to https://ifttt.com/maker_webhooks and clicking the Documentation button.
 
